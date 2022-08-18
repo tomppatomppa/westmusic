@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#hero {
+  background-image: url('./images/background-img.jpg');
+  background-repeate: no-repeate;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url('./images/background-img.jpg');
+    background-position: center;
+  }
+}
