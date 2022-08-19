@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="hidden h-10 font-alata md:flex md:space-x-8 pr-10">
           <div className="group">
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
-            <Link to="/contact">About</Link>
+            <Link to="/about">About</Link>
           </div>
           <div className="group">
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>

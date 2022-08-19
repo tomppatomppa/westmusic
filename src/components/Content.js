@@ -9,7 +9,6 @@ const Content = () => {
         </h2>
         <button className="hidden btn md:block">View all</button>
       </div>
-
       <Item />
     </div>
   )
