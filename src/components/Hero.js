@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import herovideo from '../videos/hero_video.mp4'
 const Hero = () => {
   return (
-    <div classname="relative">
+    <div className="relative">
       <div className="overlay"></div>
       <ReactPlayer
         className="max-h-96"
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
       </nav>
 
-      <div className="content relative bottom-0 top-0 max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
+      <div className="content relative left-32 bottom-0 top-0 max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
         Events that you deserve
       </div>
     </div>

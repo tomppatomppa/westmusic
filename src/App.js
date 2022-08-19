@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 import Hero from './components/Hero'
 function App() {
   return (
-    <div>
+    <div id="body">
       <div id="hero">
         <Hero />
       </div>

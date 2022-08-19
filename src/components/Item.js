@@ -2,7 +2,7 @@ import tika from '../images/tika.jpg'
 
 const Item = () => {
   return (
-    <div className="flex flex-row justify-between w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8">
+    <div className="flex flex-row justify-between w-full space-y-6 text-2xl text-white uppercase  md:flex-row md:space-y-0 md:space-x-8">
       <div className="group relative overflow-hidden md:w-1/2">
         <img
           src={tika}
