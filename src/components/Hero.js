@@ -1,7 +1,16 @@
+import { useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 import herovideo from '../videos/hero_video.mp4'
+import Content from './Content'
+import Features from './Features'
 const Hero = () => {
+  const titleRef = useRef()
+  const productsRef = useRef()
+
+  const handleBackClick = () => {
+    productsRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <div className="relative">
       <div className="overlay"></div>
@@ -21,7 +30,8 @@ const Hero = () => {
         <div className="hidden h-10 font-alata md:flex md:space-x-8 pr-10">
           <div className="group">
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
-            <Link to="/about">About</Link>
+            {/* <Link to="/about">About</Link> */}
+            <button onClick={handleBackClick}>Products</button>
           </div>
           <div className="group">
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
@@ -32,6 +42,12 @@ const Hero = () => {
 
       <div className="content relative left-32 bottom-0 top-0 max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
         Events that you deserve
+      </div>
+      <div>
+        <Features id="feature" />
+      </div>
+      <div ref={productsRef}>
+        <Content id="content" />
       </div>
     </div>
   )
