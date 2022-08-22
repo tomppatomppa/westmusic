@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import herovideo from '../videos/hero_video.mp4'
 import Content from './Content'
 import Features from './Features'
+import Footer from './Footer'
 const Hero = () => {
   const productsRef = useRef()
 
@@ -47,6 +48,7 @@ const Hero = () => {
       <div ref={productsRef}>
         <Content id="content" />
       </div>
+      <Footer />
     </div>
   )
 }
