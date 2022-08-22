@@ -5,7 +5,6 @@ import herovideo from '../videos/hero_video.mp4'
 import Content from './Content'
 import Features from './Features'
 const Hero = () => {
-  const titleRef = useRef()
   const productsRef = useRef()
 
   const handleBackClick = () => {
@@ -43,9 +42,8 @@ const Hero = () => {
       <div className="content relative left-32 bottom-0 top-0 max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
         Events that you deserve
       </div>
-      <div>
-        <Features id="feature" />
-      </div>
+
+      <Features id="feature" />
       <div ref={productsRef}>
         <Content id="content" />
       </div>
