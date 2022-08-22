@@ -25,7 +25,7 @@ const Hero = () => {
         height="100%"
       />
 
-      <nav className="content absolute flex items-center  top-0 h-1/5 w-11/12 justify-between font-bold text-white ">
+      <nav className="content absolute flex items-center  top-0 h-44 w-11/12 justify-between font-bold text-white ">
         <h1 className="px-10 uppercase ">West Music</h1>
         <div className="hidden h-10 font-alata md:flex md:space-x-8 pr-10">
           <div className="group">
