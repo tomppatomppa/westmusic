@@ -19,21 +19,24 @@ const Faq = () => {
               title={'How many guest are you expecting?'}
               index={1}
               text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                'Specify how many quest are expected to attend. For example 50-150 quests'
               }
             />
             <Faqtab
               title={'Where is your event located?'}
               index={2}
-              text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-              }
+              text={'Where is the event supposed to take place?'}
             />
             <Faqtab
               title={'What is your budget?'}
               index={2}
+              text={'Give a estimate of your budget for the event'}
+            />
+            <Faqtab
+              title={'Special requirements?'}
+              index={2}
               text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                'Are you going to need some special made music of requests?'
               }
             />
           </div>

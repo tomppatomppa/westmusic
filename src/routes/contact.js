@@ -37,12 +37,11 @@ const Contact = () => {
     <div
       id="container"
       className="
-    bg-blue-200 p-2"
+    bg-blue-200 p-2 "
     >
       <div className=" bg-blue-100">
         <Faq />
 
-        <Notification message={notification} />
         <div className="mb-60 max-w-2xl mx-auto">
           <form onSubmit={submitForm}>
             <div className="grid gap-6 mb-6 md:grid-cols-2">
@@ -98,6 +97,7 @@ const Contact = () => {
                 name="message"
               ></textarea>
             </div>
+            <Notification message={notification} />
             <div className="flex justify-end ">
               <button
                 className="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
