@@ -1,5 +1,6 @@
 import instagramLogo from '../images/instagram.png'
 import facebookLogo from '../images/facebook.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
               <div className="h-10 group">
-                <a href="/">Contact </a>
+                <Link to="/contact">Contact</Link>
                 <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
               </div>
             </div>
