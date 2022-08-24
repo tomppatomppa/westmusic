@@ -1,6 +1,6 @@
 const Faqtab = ({ title, index, text }) => {
   return (
-    <div className="py-1 border-b outline-none group" tabIndex={index}>
+    <div className=" py-1  border-b outline-none group" tabIndex={index}>
       <div className="flex tiems-center justify-between py-3 text-gray-500 transition duration 500 cursor-pointer group ease">
         <div className="transition duration-500 ease group-hover:text-red-500">
           {title}
