@@ -1,6 +1,5 @@
 const Notification = ({ message }) => {
   if (message === null) return
-
   return (
     <div
       className={`mx-auto my-12 text-center ${
