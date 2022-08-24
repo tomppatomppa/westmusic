@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Faq from '../components/Faq'
-
+import emailjs from '@emailjs/browser'
+import env from 'react-dotenv'
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -8,7 +9,16 @@ const Contact = () => {
 
   const submitForm = (event) => {
     event.preventDefault()
-    console.log(name, email, message)
+    emailjs
+      .sendForm(env.SERVICE_ID, env.YOUR_TEMPLATE_ID, event.target, env.USER_ID)
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
     setName('')
     setEmail('')
     setMessage('')
@@ -34,6 +44,7 @@ const Contact = () => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="John"
                 required
+                name="from_name"
               />
             </div>
             <div>
@@ -51,6 +62,7 @@ const Contact = () => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="john.doe@company.com"
                 required
+                name="from_email"
               />
             </div>
           </div>
@@ -66,6 +78,7 @@ const Contact = () => {
               onChange={(event) => setMessage(event.target.value)}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
+              name="message"
             ></textarea>
           </div>
           <div className="flex justify-end">

@@ -1,5 +1,6 @@
 import arrow from '../images/angle-down-solid.svg'
 import Faqtab from './Faqtab'
+
 const Faq = () => {
   return (
     <div>

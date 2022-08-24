@@ -7,6 +7,7 @@ import App from './App'
 import About from './routes/about'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+
 root.render(
   <BrowserRouter>
     <Routes>
