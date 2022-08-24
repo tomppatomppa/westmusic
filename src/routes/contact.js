@@ -2,21 +2,31 @@ import { useState } from 'react'
 import Faq from '../components/Faq'
 import emailjs from '@emailjs/browser'
 import env from 'react-dotenv'
+import Notification from '../components/Notification'
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [notification, setNotification] = useState(null)
 
+  const notify = (message, type = 'info') => {
+    setNotification({ message, type })
+    setTimeout(() => {
+      setNotification(null)
+    }, 5000)
+  }
   const submitForm = (event) => {
     event.preventDefault()
     emailjs
       .sendForm(env.SERVICE_ID, env.YOUR_TEMPLATE_ID, event.target, env.USER_ID)
       .then(
         (result) => {
-          console.log(result.text)
+          console.log(notification)
+          notify('Message sent successfully')
         },
         (error) => {
           console.log(error.text)
+          notify('Error sending message', 'alert')
         }
       )
     setName('')
@@ -26,6 +36,7 @@ const Contact = () => {
   return (
     <div className="">
       <Faq />
+      <Notification message={notification} />
       <div className="max-w-2xl mx-auto">
         <form onSubmit={submitForm}>
           <div className=" grid gap-6 mb-6 md:grid-cols-2">
