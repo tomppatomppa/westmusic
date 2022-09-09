@@ -3,13 +3,14 @@ import Faqtab from './Faqtab'
 
 const Faq = () => {
   return (
-    <div>
+    <div className="">
       <div className="container mx-auto">
         <h2 className="mb-6 text-3xl font-semibold text-center">
           Frequently asked question
         </h2>
         <p className="max-w-lg px-6 mx-auto text-center text-black">
-          Here might be some helpful advice what to include in your message
+          Here might be some <span className="text-green-700 ">helpful</span>{' '}
+          advice what to include in your message
         </p>
       </div>
       <div id="faq-accordion">
@@ -25,19 +26,17 @@ const Faq = () => {
             <Faqtab
               title={'Where is your event located?'}
               index={2}
-              text={'Where is the event supposed to take place?'}
+              text={'When and Where is the event supposed to take place?'}
             />
             <Faqtab
               title={'What is your budget?'}
               index={2}
-              text={'Give a estimate of your budget for the event'}
+              text={'Give an estimate of your budget for the event'}
             />
             <Faqtab
               title={'Special requirements?'}
               index={2}
-              text={
-                'Are you going to need some special made music of requests?'
-              }
+              text={'Anything special requirements?'}
             />
           </div>
         </div>

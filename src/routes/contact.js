@@ -3,6 +3,7 @@ import Faq from '../components/Faq'
 import emailjs from '@emailjs/browser'
 import env from 'react-dotenv'
 import Notification from '../components/Notification'
+import { Link } from 'react-router-dom'
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -35,13 +36,12 @@ const Contact = () => {
   }
   return (
     <div
-      id="container"
-      className="
+      id="container "
+      className="font-alata flex v-screen justify-center items-center
     bg-blue-200 p-2 "
     >
-      <div className=" bg-blue-100">
+      <div className="max-h-2xl px-6 py-12  bg-blue-100">
         <Faq />
-
         <div className="mb-60 max-w-2xl mx-auto">
           <form onSubmit={submitForm}>
             <div className="grid gap-6 mb-6 md:grid-cols-2">
@@ -104,6 +104,12 @@ const Contact = () => {
                 type="submit"
               >
                 Send
+              </button>
+              <button
+                type="button"
+                className="ml-1 mb-2 bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded"
+              >
+                <Link to="/">Cancel</Link>
               </button>
             </div>
           </form>
